@@ -1,6 +1,6 @@
 # Anime_face_generator
 
-Welcome to the Anime Faces GAN project! In this repository, we explore the fascinating world of Generative Adversarial Networks (GANs) applied to generating anime faces. We have trained a GAN model on a dataset of 3400 anime face images, and the results are truly mesmerizing. This project showcases the power of deep learning in creating stunningly realistic anime-style portraits.
+Welcome to the Anime Faces GAN project! In this repository, we explore the fascinating world of Generative Adversarial Networks (GANs) applied to generating anime faces. We have trained a GAN model on a dataset of 3400 anime face images, which is a very small dataset, but the results are quite satisfying. This project showcases the power of deep learning in creating stunningly realistic anime face images.
 
 ## Table of Contents
 
@@ -21,38 +21,33 @@ Generative Adversarial Networks (GANs) are a powerful class of deep learning mod
 
 We collected a diverse dataset of 3400 anime face images from various sources, carefully curated to ensure a wide range of styles and features. The dataset includes different facial expressions, hairstyles, and accessories, providing a rich training ground for our GAN model to learn from.
 
-![Dataset Samples](images/dataset_samples.png)
+![Dataset Samples](images/img.jpg)
 
 ## Model Architecture
 
 Our GAN architecture consists of a generator and a discriminator. The generator takes random noise as input and gradually learns to generate anime-style faces that are indistinguishable from real images. The discriminator, on the other hand, is trained to differentiate between real images from our dataset and fake images produced by the generator.
-
-![GAN Architecture](images/gan_architecture.png)
 
 ## Training
 
 The training process involves iteratively optimizing the generator and discriminator networks. The generator aims to produce images that can fool the discriminator, while the discriminator aims to better distinguish real images from fake ones. This adversarial training process leads to the refinement of both networks over time.
 
 Training Parameters:
-- Learning Rate: 0.0002
-- Batch Size: 64
-- Epochs: 100
+- Learning Rate: 0.002
+- Batch Size: 34
+- Epochs: 10
 
 ## Results
 
-After extensive training, our GAN model has learned to create stunningly realistic anime faces that capture the essence of the anime art style. The generated images exhibit a variety of facial expressions, hairstyles, and accessories, showcasing the versatility of the model.
+After training it for around 100 epochs with suitable hyperparameter tuning, you will get amazing results, since this model is trained for just 2 epocs because of lack of computaional power and time, it is not producing that much good result. The generated images will exhibit a variety of facial expressions, hairstyles, and accessories, showcasing the versatility of the model.
 
-Here are some samples of the generated anime faces:
-
-![Generated Samples](images/generated_samples.png)
-
+/
 ## Usage
 
 To use the trained GAN model for generating your own anime faces, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/your-username/anime-faces-gan.git`
-2. Install the required dependencies: `pip install -r requirements.txt`
-3. Run the `generate_faces.py` script: `python generate_faces.py`
+1. Clone this repository: `git clone https://github.com/shivanshu8211/Anime_face_generatoir.git`
+2. Install the required dependencies: python3, torch, torchvison
+3. Run the `GAN_code.ipynb`
 
 You can customize the generation parameters and experiment with different noise inputs to produce a wide range of unique anime faces.
 
